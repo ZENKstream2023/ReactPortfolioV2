@@ -46,10 +46,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Sirve el frontend estático desde /var/www/frontend/distI
-app.use(express.static(path.join(__dirname, "../Vue_FrontendV2/dist")));
+app.use(express.static(path.join("../React_FrontendV2/dist")));
 // Definir la política CSP
 app.use((req, res, next) => {
-  res.setHeader('Content-Security-Policy', "img-src 'self' https://*.jtvnw.net https://localhost:3200/*");
+  res.setHeader('Content-Security-Policy', "img-src 'self' https://*.jtvnw.net");
   next();
 });
 
@@ -61,7 +61,7 @@ app.use((req, res, next) => {
 		next();
 	} else {
 		// Si la ruta no comienza con "/api", redirige al archivo de entrada del frontend
-		res.sendFile(path.join(__dirname, "../Vue_FrontendV2/dist", "index.html"));
+		res.sendFile(path.join("../Vue_FrontendV2/dist", "index.html"));
 	}
 });
 
@@ -95,10 +95,10 @@ mongoose
 	});
 
 // Configura el servidor HTTPS
-const httpsServer = https.createServer(credentials, app);
+const httpsServer = https.createServer(options, app);
 
 // Define el puerto para el servidor HTTPS
-const httpsPort = process.env.HTTPS_PORT || 443;
+const httpsPort = process.env.HTTPS_PORT || 3200;
 
 // Inicia el servidor HTTPS
 httpsServer.listen(httpsPort, () => {
