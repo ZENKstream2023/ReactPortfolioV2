@@ -35,7 +35,7 @@ app.use((req, res, next) => {
 });
 // CORS
 //app.use(cors());
-const corsOptions = {
+/*const corsOptions = {
         origin: "https://localhost:3200",
         methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
         credentials: true,
@@ -44,12 +44,12 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
+*/
 // Sirve el frontend estático desde /var/www/frontend/distI
 app.use(express.static(path.join("../React_FrontendV2/dist")));
 // Definir la política CSP
 app.use((req, res, next) => {
-  res.setHeader('Content-Security-Policy', "img-src 'self' https://*.jtvnw.net");
+  res.setHeader('Content-Security-Policy', "img-src 'self' https://*.jtvnw.net ");
   next();
 });
 
@@ -60,8 +60,9 @@ app.use((req, res, next) => {
 		// Si la ruta comienza con "/api", pasa al siguiente middleware
 		next();
 	} else {
-		// Si la ruta no comienza con "/api", redirige al archivo de entrada del frontend
-		res.sendFile(path.join("../Vue_FrontendV2/dist", "index.html"));
+		// Si la ruta no comienza con "/api", envía el archivo de entrada del frontend
+		const indexPath = path.resolve("../React_FrontendV2/dist/index.html");
+		res.sendFile(indexPath);
 	}
 });
 
