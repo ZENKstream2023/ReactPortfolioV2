@@ -60,10 +60,7 @@ app.use((req, res, next) => {
 		// Si la ruta comienza con "/api", pasa al siguiente middleware
 		next();
 	} else {
-		// Si la ruta no comienza con "/api", envía el archivo de entrada del frontend
-		const indexPath = path.resolve("../React_FrontendV2/dist/index.html");
-		console.log(indexPath)
-		res.sendFile(indexPath);
+		res.sendFile(path.resolve("../React_FrontendV2/dist/", "index.html"));
 	}
 });
 

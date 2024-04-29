@@ -15,7 +15,7 @@ const isPathAllowed = (path) => {
 	}
 
 	// Verifica si la ruta está dentro de la carpeta 'assets'
-	if (path.startsWith("/js") || path.startsWith("/css")) {
+	if (path.startsWith('/assets')) {
 		// Si la ruta está dentro de 'assets', se considera permitida
 		return true;
 	}
