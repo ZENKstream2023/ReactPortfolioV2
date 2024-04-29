@@ -70,27 +70,17 @@ function Header() {
 				</nav>
 			</div>
 			<div className="banner">
-				<div style="margin-top: 21em; z-index:1">
-					<h1 style="color: white">
-						¡Bienvenido a nuestra plataforma de RRHH! Juntos, creamos un entorno
-						donde el talento brilla y las oportunidades prosperan.
-					</h1>
-					<p style="color: white" className="lead">
-						Encuentra tu sucursal.
-					</p>
-					<p className="lead">
-						<a
-							href="/locations"
-							className="fw-bold py-1 border-white btn btn-primary pt-2"
-							style="height:2.5em; background: linear-gradient(
-		to right,
-		#df18df,
-		#4c9ae7
-	);"
-							type="submit"
-						>
-							¡AQUÍ!
-						</a>
+			<div style={{ marginTop: "21em", zIndex: 1 }}>
+    <h1 style={{ color: "white" }}>
+        ¡Bienvenido a nuestra plataforma de RRHH! Juntos, creamos un entorno donde el talento brilla y las oportunidades prosperan.
+    </h1>
+    <p style={{ color: "white" }} className="lead">
+        Encuentra tu sucursal.
+    </p>
+    <p className="lead">
+        <a href="/locations" className="fw-bold py-1 border-white btn btn-primary pt-2" style={{ height: "2.5em", background: "linear-gradient(to right, #df18df, #4c9ae7)" }} type="submit">
+            ¡AQUÍ!
+        </a>
 					</p>
 				</div>
 			</div>
