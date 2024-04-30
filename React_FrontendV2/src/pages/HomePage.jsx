@@ -13,12 +13,12 @@ function Header() {
 	}, []);
 
 	return (
-		<header>
+		<header >
 			<div
 				style={{
 					position: "fixed",
 					backgroundColor: "white",
-					zIndex: 1,
+					zIndex: 100,
 					width: "100%",
 					height: "8em",
 				}}
@@ -44,7 +44,7 @@ function Header() {
 					<a
 						style={{ color: "black" }}
 						className="nav-link fw-bold py-1"
-						href="/locations"
+						href="/sucursales"
 					>
 						Sucursales
 					</a>
@@ -70,32 +70,32 @@ function Header() {
 				</nav>
 			</div>
 			<div className="banner">
-			<div style={{ marginTop: "21em", zIndex: 1 }}>
-    <h1 style={{ color: "white" }}>
-        ¡Bienvenido a nuestra plataforma de RRHH! Juntos, creamos un entorno donde el talento brilla y las oportunidades prosperan.
-    </h1>
-    <p style={{ color: "white" }} className="lead">
-        Encuentra tu sucursal.
-    </p>
-    <p className="lead">
-        <a href="/locations" className="fw-bold py-1 border-white btn btn-primary pt-2" style={{ height: "2.5em", background: "linear-gradient(to right, #df18df, #4c9ae7)" }} type="submit">
-            ¡AQUÍ!
-        </a>
-					</p>
-				</div>
-			</div>
-			<footer style={{ bottom: 0, width: "100%", marginTop: "6em" }}>
+			<div style={{  zIndex: 3}}>
+				<h1 style={{  zIndex: 2 , color: "white", textAlign: "center" }}>
+					¡Bienvenido a nuestra plataforma de RRHH! <br/> Juntos, creamos un entorno donde el talento brilla y las oportunidades prosperan.
+				</h1>
+				<p style={{ color: "white", textAlign: "center"}} className="lead">
+					Encuentra tu sucursal.
+				</p>
+				<p style={{ textAlign: "center"}} className="lead">
+					<a href="/locations" className="fw-bold py-1 border-white btn btn-primary pt-2" style={{ height: "2.5em", background: "linear-gradient(to right, #df18df, #4c9ae7)" }} type="submit">
+						¡AQUÍ!
+					</a>
+								</p>
+							</div>
+						</div>
+			<footer style={{ bottom: 0, width: "100%" }}>
 				<section
 					className="row"
 					style={{
-						height: "20em",
+						height: "15em",
 						backgroundColor: "black",
 						color: "white",
 						listStyle: "none",
 					}}
 				>
 					<div className="col"></div>
-					<article style={{ marginTop: "6em" }} className="col-1">
+					<article style={{ marginTop: "4em" }} className="col-1">
 						<a target="_blank">
 							<img
 								src="logofooter.png"
@@ -105,7 +105,7 @@ function Header() {
 							/>
 						</a>
 					</article>
-					<article style={{ marginTop: "6em" }} className="col-1">
+					<article style={{ marginTop: "4em" }} className="col-1">
 						<a href="https://www.izenpe.eus/inicio/">
 							<img
 								src="bakq.png"
@@ -115,7 +115,7 @@ function Header() {
 							/>
 						</a>
 					</article>
-					<article style={{ marginTop: "6em" }} className="col-1">
+					<article style={{ marginTop: "4em" }} className="col-1">
 						<a href="https://www.bizkaia.eus/es/inicio">
 							<img
 								src="bforualdundia.png"
@@ -125,18 +125,18 @@ function Header() {
 							/>
 						</a>
 					</article>
-					<article className="col" style={{ marginLeft: "4em" }}>
+					<article className="col" style={{ marginLeft: "6em" }}>
 						<nav style={{ textAlign: "left", marginTop: "2.5em" }}>
-							<a className="row">Condiciones generales</a>
-							<a className="row">10T</a>
-							<a className="row">Nomina</a>
-							<a className="row">Seguridad y Protección</a>
-							<a className="row">Declaraciones</a>
-							<a className="row">FAQs</a>
+							<a style={{ textDecoration: 'none', color: 'white'}} className="row">Condiciones generales</a>
+							<a style={{ textDecoration: 'none', color: 'white'}} className="row">10T</a>
+							<a style={{ textDecoration: 'none', color: 'white'}} className="row">Nomina</a>
+							<a style={{ textDecoration: 'none', color: 'white'}} className="row">Seguridad y Protección</a>
+							<a style={{ textDecoration: 'none', color: 'white'}} className="row">Declaraciones</a>
+							<a style={{ textDecoration: 'none', color: 'white'}} className="row">FAQs</a>
 						</nav>
 					</article>
 					<article
-						style={{ marginTop: "4em", textAlign: "left" }}
+						style={{ marginTop: "2em", textAlign: "left" }}
 						className="col-2"
 					>
 						<h5>CONTACTO</h5>
