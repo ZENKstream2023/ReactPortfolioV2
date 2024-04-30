@@ -1,0 +1,42 @@
+import React, { useState, useEffect } from 'react';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
+
+function MapComponent() {
+  const [coordinates, setCoordinates] = useState(null);
+  const [address, setAddress] = useState('Dirección a buscar');
+
+  // Función para convertir la dirección en coordenadas
+  const geocodeAddress = () => {
+    const geocoder = new window.google.maps.Geocoder();
+    geocoder.geocode({ address: address }, (results, status) => {
+      if (status === 'OK') {
+        const { lat, lng } = results[0].geometry.location;
+        setCoordinates({ lat: lat(), lng: lng() });
+      } else {
+        console.error('Error al geocodificar la dirección:', status);
+      }
+    });
+  };
+
+  // Llama a geocodeAddress() cuando cambia la dirección
+  useEffect(() => {
+    if (address !== 'Dirección a buscar') {
+      geocodeAddress();
+    }
+  }, [address]);
+
+  return (
+    <LoadScript
+      googleMapsApiKey="TU_CLAVE_DE_API_DE_GOOGLE_MAPS"
+    >
+      <GoogleMap
+        center={coordinates}
+        zoom={15}
+      >
+        {/* Contenido del mapa, como marcadores, polígonos, etc. */}
+      </GoogleMap>
+    </LoadScript>
+  );
+}
+
+export default MapComponent;

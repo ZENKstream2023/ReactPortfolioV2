@@ -49,7 +49,7 @@ app.use(cors(corsOptions));
 app.use(express.static(path.join("../React_FrontendV2/dist")));
 // Definir la política CSP
 app.use((req, res, next) => {
-  res.setHeader('Content-Security-Policy', "img-src 'self' https://*.jtvnw.net ");
+  res.setHeader('Content-Security-Policy', "img-src 'self' https://*.jtvnw.net https://www.google.com/*");
   next();
 });
 

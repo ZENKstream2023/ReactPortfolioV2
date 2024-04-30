@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Importa los datos de forma local en caso de fallo de la API o de la Base de Datos
 import sucursales from "@/data/sucursales.json";
