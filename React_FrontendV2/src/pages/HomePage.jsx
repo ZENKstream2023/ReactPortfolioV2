@@ -30,7 +30,7 @@ function Header() {
 					className="col-1 float-md-start mb-5"
 				/>
 				<nav
-					style={{ justifyContent: "right", fontSize: "1.15em" }}
+					style={{ justifyContent: "right", marginTop:'1.5em', fontSize: "1.15em" }}
 					className="col-11 nav"
 				>
 					<a
