@@ -42,7 +42,7 @@ function LoginView() {
 
 	return (
 		<div className="banner">
-			<div style={{ marginTop: "15em", paddingInline: "40%", zIndex: 1 }}>
+			<div style={{ marginTop: "15em", paddingInline: "40%", zIndex: 1, width:'100vw', textAlign:'center'}}>
 				{formType === "signin" ? (
 					<form onSubmit={handleSignIn} className="signin">
 						<img
@@ -53,7 +53,7 @@ function LoginView() {
 							height="130em"
 						/>
 						<h1 className="h3 mb-3 fw-normal"></h1>
-						<div className="form-floating">
+						<div className="form-floating mb-2">
 							<input
 								type="email"
 								className="form-control"
@@ -86,6 +86,7 @@ function LoginView() {
 						</button>
 						<div className="text-center">
 							<button
+								style={{ textDecoration: 'none', color: 'white'}}
 								className="btn btn-link"
 								onClick={() => setFormType("signup")}
 							>
@@ -99,11 +100,11 @@ function LoginView() {
 							className="mb-4"
 							src="logofooter.png"
 							alt=""
-							width="150em"
+							width="160em"
 							height="130em"
 						/>
 						<h1 className="h3 mb-3 fw-normal"></h1>
-						<div className="form-floating">
+						<div className="form-floating mb-2">
 							<input
 								type="email"
 								className="form-control"
@@ -136,6 +137,7 @@ function LoginView() {
 						</button>
 						<div className="text-center">
 							<button
+								style={{ textDecoration: 'none', color: 'white'}}
 								className="btn btn-link"
 								onClick={() => setFormType("signin")}
 							>

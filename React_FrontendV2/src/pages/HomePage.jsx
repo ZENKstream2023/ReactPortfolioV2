@@ -70,7 +70,7 @@ function Header() {
 				</nav>
 			</div>
 			<div className="banner">
-			<div style={{  zIndex: 3}}>
+			<div style={{  zIndex: 3, width:'100vw'}}>
 				<h1 style={{  zIndex: 2 , color: "white", textAlign: "center" }}>
 					¡Bienvenido a nuestra plataforma de RRHH! <br/> Juntos, creamos un entorno donde el talento brilla y las oportunidades prosperan.
 				</h1>
