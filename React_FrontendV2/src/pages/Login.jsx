@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 function LoginView() {
 	const [email, setEmail] = useState(null);
 	const [password, setPassword] = useState(null);
 	const [formType, setFormType] = useState("signin");
-
+	const navigate = useNavigate();
 	const handleSignIn = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await axios.post("https://localhost:3200/signin", {
+			const response = await axios.post("https://localhost:3200/api/signin", {
 				email,
 				password,
 			});
 			if (response.data.status === "ok") {
 				// Redireccionar a la página del panel después del inicio de sesión exitoso
-				window.location.href = "/panel";
+				console.log("INICIO SESION")
+				navigate("/panel");
 			}
 		} catch (error) {
 			// Manejar el error si la solicitud falla
@@ -26,13 +27,14 @@ function LoginView() {
 	const createAccount = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await axios.post("https://localhost:3200/signup", {
+			const response = await axios.post("https://localhost:3200/api/signup", {
 				email,
 				password,
 			});
 			if (response.data.status === "ok") {
 				// Redireccionar a la página del panel después de crear la cuenta exitosamente
-				window.location.href = "/panel";
+
+				navigate("/panel");
 			}
 		} catch (error) {
 			// Manejar el error si la solicitud falla
