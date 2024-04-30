@@ -24,7 +24,7 @@ function Header() {
 				}}
 				className="row cover-container d-flex p-3 mx-auto shadow-sm"
 			>
-				<image
+				<img
 					style={{ paddingLeft: "2em" }}
 					src="logorrhh.png"
 					className="col-1 float-md-start mb-5"
