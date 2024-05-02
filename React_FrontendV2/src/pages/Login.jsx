@@ -23,7 +23,6 @@ function LoginView() {
 			console.log(error);
 		}
 	};
-
 	const createAccount = async (e) => {
 		e.preventDefault();
 		try {
@@ -43,6 +42,53 @@ function LoginView() {
 	};
 
 	return (
+		<div>
+			<header
+    style={{
+        position: "fixed",
+        backgroundColor: "white",
+        zIndex: 100,
+        width: "100%",
+        height: "6em",
+    }}
+    className="row cover-container d-flex p-1 mx-auto shadow-sm"
+>
+<a className="col-1" href="/">
+        <img
+            style={{height:'6em', width:'6em'}}
+            src="logorrhh.png"
+            className="col-1 float-md-start mb-5"
+        />
+        </a>
+    <nav
+        style={{ justifyContent: "right", marginTop:'1.5em', fontSize: "1.15em" }}
+        className="col-11 nav"
+    >
+        <a
+            style={{ color: "black" }}
+            className="nav-link fw-bold py-1 active"
+            aria-current="page"
+            href="/"
+        >
+            Inicio
+        </a>
+        <a
+            style={{ color: "black" }}
+            className="nav-link fw-bold py-1"
+            href="/sucursales"
+        >
+            Sucursales
+        </a>
+        <a
+            style={{ color: "black" }}
+            className="nav-link fw-bold py-1"
+            href="/panel"
+        >
+            Panel
+        </a>
+    </nav>
+</header>
+
 		<div className="banner">
 			<div style={{ marginTop: "15em", paddingInline: "40%", zIndex: 1, width:'100vw', textAlign:'center'}}>
 				{formType === "signin" ? (
@@ -149,6 +195,7 @@ function LoginView() {
 					</form>
 				)}
 			</div>
+		</div>
 		</div>
 	);
 }

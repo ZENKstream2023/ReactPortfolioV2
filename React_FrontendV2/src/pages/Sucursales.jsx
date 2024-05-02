@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 // Importa los datos de forma local en caso de fallo de la API o de la Base de Datos
 import sucursales from "@/data/sucursales.json";
 
@@ -62,11 +63,15 @@ function FindStore() {
 			newReplace.push(whereIs[i].replace(" ", "%20"));
 		}
 		newWhere = newReplace.join("");
-		setWhere(newWhere);
+		const direction = `https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=`+ newWhere + `&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed`;
+		console.log(direction);
+		setWhere(direction);
 	};
 	return (
+		<div>
+		<Header/>
 		<section
-			style={{ backgroundColor: "#e4e4f4", width: "100%", paddingTop: "15em" }}
+			style={{ backgroundColor: "#e4e4f4", width: "100%", paddingTop: "8em" }}
 		>
 			{/* Wireframe: Encuentra tu sucursal */}
 			<article
@@ -266,7 +271,7 @@ function FindStore() {
 							scrolling="no"
 							marginHeight="0"
 							marginWidth="0"
-							src='https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=es&amp;q=${where}&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'
+							src={where}
 							width="100%"
 							height="400"
 							frameBorder="0"
@@ -278,6 +283,8 @@ function FindStore() {
 			</article>
 			{/* Fin de wireframe: After the search */}
 		</section>
+		<Footer/>
+		</div>
 	);
 }
 

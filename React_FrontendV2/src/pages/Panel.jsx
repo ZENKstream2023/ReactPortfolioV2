@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Chart from "chart.js/auto";
-
 function PanelView() {
 	useEffect(() => {
 		// Obtenemos el elemento del span que mostrará el año actual
@@ -50,6 +51,8 @@ function PanelView() {
 	}, []);
 
 	return (
+		<div>
+			<Header/>
 		<div className="container-fluid">
 			<div className="row">
 				<div
@@ -94,7 +97,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#file-earmark" />
+											<use xlinkHref="#file-earmark" />
 										</svg>
 										Pedidos
 									</a>
@@ -105,7 +108,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#cart" />
+											<use xlinkHref="#cart" />
 										</svg>
 										Productos
 									</a>
@@ -116,7 +119,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#people" />
+											<use xlinkHref="#people" />
 										</svg>
 										Clientes
 									</a>
@@ -127,7 +130,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#graph-up" />
+											<use xlinkHref="#graph-up" />
 										</svg>
 										Informes
 									</a>
@@ -138,7 +141,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#puzzle" />
+											<use xlinkHref="#puzzle" />
 										</svg>
 										Integraciones
 									</a>
@@ -153,7 +156,7 @@ function PanelView() {
 									aria-label="Add a new report"
 								>
 									<svg className="bi">
-										<use xlink:href="#plus-circle" />
+										<use xlinkHref="#plus-circle" />
 									</svg>
 								</a>
 							</h6>
@@ -164,7 +167,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#file-earmark-text" />
+											<use xlinkHref="#file-earmark-text" />
 										</svg>
 										Mes actual
 									</a>
@@ -175,7 +178,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#file-earmark-text" />
+											<use xlinkHref="#file-earmark-text" />
 										</svg>
 										Último Trimestre
 									</a>
@@ -186,7 +189,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#file-earmark-text" />
+											<use xlinkHref="#file-earmark-text" />
 										</svg>
 										Acuerdos Cerrados
 									</a>
@@ -197,7 +200,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#file-earmark-text" />
+											<use xlinkHref="#file-earmark-text" />
 										</svg>
 										Cierre Anual
 									</a>
@@ -211,7 +214,7 @@ function PanelView() {
 										href="#"
 									>
 										<svg className="bi">
-											<use xlink:href="#gear-wide-connected" />
+											<use xlinkHref="#gear-wide-connected" />
 										</svg>
 										Configuración
 									</a>
@@ -220,11 +223,7 @@ function PanelView() {
 									<a
 										href="/logout"
 										className="fw-bold py-1 border-white btn btn-primary pt-2"
-										style="height:2.5em; margin-top:5em; background: linear-gradient(
-                to right,
-                #df18df,
-                #4c9ae7
-              );"
+										style={{height:'2.5em', marginTop:'5em', background: 'linear-gradient( to right, #df18df, #4c9ae7 )'}}
 										type="submit"
 									>
 										Cerrar Sesión
@@ -258,7 +257,7 @@ function PanelView() {
 								className="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1"
 							>
 								<svg className="bi">
-									<use xlink:href="#calendar3" />
+									<use xlinkHref="#calendar3" />
 								</svg>
 								Este mes
 							</button>
@@ -410,6 +409,9 @@ function PanelView() {
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<Footer/>
 		</div>
 	);
 }
