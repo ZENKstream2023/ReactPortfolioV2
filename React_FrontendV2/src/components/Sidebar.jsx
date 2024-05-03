@@ -73,9 +73,14 @@ export const Sidebar = () => {
 						<use xlinkHref="#bootstrap" />
 					</svg>
 					<span className="fs-4 text-center">
-						<h2>
-							<b>GLOGLO</b>
-						</h2>
+					<img
+								src="logorrhh.png"
+								width="100"
+								height="100"
+								className="rounded-circle"
+								style={{background:'white'}}
+							/>
+						
 					</span>
 					<hr />
 					<ul className="nav nav-pills flex-column mb-auto">
@@ -211,6 +216,13 @@ export const Sidebar = () => {
 							data-bs-toggle="dropdown"
 							aria-expanded="false"
 						>
+							<img
+								src="logofooter.png"
+								alt=""
+								width="42"
+								height="42"
+								className="rounded-circle me-3"
+							/>
 							<strong>Perfil</strong>
 						</Dropdown.Toggle>
 						<Dropdown.Menu className="dropdown-menu dropdown-menu-dark text-small shadow">
